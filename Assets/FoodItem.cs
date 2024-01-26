@@ -7,6 +7,7 @@ public class FoodBehaviour : MonoBehaviour
     public float moveSpeed = 0f;
     public bool isDropped = false;
     public string keyCode = "";
+    string[] sprites = { "cheese", "cucumber", "hamburger", "tomato"};
 
     public Vector3 initialPos;
 
@@ -60,6 +61,6 @@ public class FoodBehaviour : MonoBehaviour
         clone.GetComponent<FoodBehaviour>().isDropped = false;
         clone.GetComponent<FoodBehaviour>().moveSpeed = 0f;
         clone.GetComponent<Rigidbody2D>().gravityScale = 0f;
-        // clone.GetComponent<SpriteRenderer>().sprite =  UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>("tomato");
+        clone.GetComponent<SpriteRenderer>().sprite =  Resources.Load<Sprite>(sprites[Random.Range(0, sprites.Length)]);
     }
 }
