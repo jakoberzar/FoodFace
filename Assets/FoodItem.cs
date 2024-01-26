@@ -27,6 +27,7 @@ public class FoodBehaviour : MonoBehaviour
     void Update()
     {
         if (isDropped) {
+            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
             return;
         }
         if (keyCode == "Q" && Input.GetKeyDown(KeyCode.Q))
@@ -45,12 +46,11 @@ public class FoodBehaviour : MonoBehaviour
         {
             drop();    
         }
-        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
     }
 
-    void OnCollisionEnter2D(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        moveSpeed = 1f;
+        moveSpeed = 2f;
     }
 
     IEnumerator DelayedClone()
@@ -58,6 +58,8 @@ public class FoodBehaviour : MonoBehaviour
         yield return new WaitForSeconds(5f);
         GameObject clone = Instantiate(gameObject, initialPos, transform.rotation);
         clone.GetComponent<FoodBehaviour>().isDropped = false;
+        clone.GetComponent<FoodBehaviour>().moveSpeed = 0f;
         clone.GetComponent<Rigidbody2D>().gravityScale = 0f;
+        // clone.GetComponent<SpriteRenderer>().sprite =  UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>("tomato");
     }
 }
