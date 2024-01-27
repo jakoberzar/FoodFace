@@ -28,10 +28,11 @@ public class FoodDropper : MonoBehaviour
         {
             drop_it = true;
         }
-        if (drop_it)
+        if (drop_it && current_food)
         {
             current_food.GetComponent<FoodBehaviour>().drop();
             StartCoroutine(DelayedClone());
+            current_food = null;
         }
     }
 
