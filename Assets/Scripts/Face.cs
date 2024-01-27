@@ -7,7 +7,7 @@ public class Face : MonoBehaviour
 {
     public float constantMoveUp = 0.05f;
     public float upLimitY = 1.3f;
-    private float constantMoveDown = 0.75f;
+    public float constantMoveDown = 0.75f;
     public float downLimitY = -1.7f;
 
     private bool downWasPressed = false;

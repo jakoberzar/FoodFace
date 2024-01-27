@@ -1126,11 +1126,11 @@ MonoBehaviour:
   keyCode: E
   current_food: {fileID: 535207768}
   foodPrefabs:
-  - {fileID: 2739914261989026702, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
-  - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
-  - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
   - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
-  waitBetweenRespawns: 2
+  - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
+  - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
+  - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
+  waitBetweenRespawns: 0.5
   initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &575249547
 GameObject:
@@ -1374,11 +1374,11 @@ MonoBehaviour:
   keyCode: Q
   current_food: {fileID: 2074615888}
   foodPrefabs:
-  - {fileID: 2739914261989026702, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
-  - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
   - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
-  - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
-  waitBetweenRespawns: 2
+  - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
+  - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
+  - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
+  waitBetweenRespawns: 0.5
   initialPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &677357388
 PrefabInstance:
@@ -2180,10 +2180,10 @@ MonoBehaviour:
   current_food: {fileID: 19414102}
   foodPrefabs:
   - {fileID: 2739914261989026702, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
-  - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
-  - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
-  - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
-  waitBetweenRespawns: 2
+  - {fileID: 2739914261989026702, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
+  - {fileID: 2739914261989026702, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
+  - {fileID: 2739914261989026702, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
+  waitBetweenRespawns: 0.5
   initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -3118,6 +3118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   constantMoveUp: 0.05
   upLimitY: 1.6
+  constantMoveDown: 0.3
   downLimitY: -0.25
 --- !u!145 &1375284518
 SpringJoint:
@@ -3132,7 +3133,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 0
   m_ConnectedAnchor: {x: 0, y: 3.7, z: 0}
   serializedVersion: 2
-  m_Spring: 40
+  m_Spring: 30
   m_Damper: 10
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -3510,11 +3511,11 @@ MonoBehaviour:
   keyCode: R
   current_food: {fileID: 173830575}
   foodPrefabs:
-  - {fileID: 2739914261989026702, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
   - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
-  - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
-  - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
-  waitBetweenRespawns: 2
+  - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
+  - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
+  - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
+  waitBetweenRespawns: 0.5
   initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1618117408
 GameObject:
