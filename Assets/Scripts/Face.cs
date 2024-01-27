@@ -7,7 +7,7 @@ public class Face : MonoBehaviour
 {
     public float constantMoveUp = 0.05f;
     public float upLimitY = 1.3f;
-    private float constantMoveDown = 1.2f;
+    private float constantMoveDown = 0.75f;
     public float downLimitY = -1.7f;
 
     private bool downWasPressed = false;
@@ -37,12 +37,6 @@ public class Face : MonoBehaviour
             position.y -= constantMoveDown;
             position.y = Math.Max(downLimitY, position.y);
             downWasPressed = false;
-        }
-        else if (position.y < upLimitY)
-        {
-            // TODO: Make it more like a spring
-            position.y += constantMoveUp;
-            position.y = Math.Min(upLimitY, position.y);
         }
 
         transform.position = position;
