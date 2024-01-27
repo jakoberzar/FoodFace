@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FoodBehaviour : MonoBehaviour
 {
-    public float moveSpeed = 0f;
     public bool isDropped = false;
     public string keyCode = "";
     string[] sprites = { "cheese", "cucumber", "hamburger", "tomato"};
@@ -28,7 +27,6 @@ public class FoodBehaviour : MonoBehaviour
     void Update()
     {
         if (isDropped) {
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
             return;
         }
         if (keyCode == "Q" && Input.GetKeyDown(KeyCode.Q))
@@ -49,17 +47,11 @@ public class FoodBehaviour : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        moveSpeed = 2f;
-    }
-
     IEnumerator DelayedClone()
     {
         yield return new WaitForSeconds(5f);
         GameObject clone = Instantiate(gameObject, initialPos, transform.rotation);
         clone.GetComponent<FoodBehaviour>().isDropped = false;
-        clone.GetComponent<FoodBehaviour>().moveSpeed = 0f;
         clone.GetComponent<Rigidbody2D>().gravityScale = 0f;
         clone.GetComponent<SpriteRenderer>().sprite =  Resources.Load<Sprite>(sprites[Random.Range(0, sprites.Length)]);
     }
