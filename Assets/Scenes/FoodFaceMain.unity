@@ -160,11 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12639417404311150, guid: 62edc116408dc3641a683aa01389cded, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 2.49
       objectReference: {fileID: 0}
     - target: {fileID: 12639417404311150, guid: 62edc116408dc3641a683aa01389cded, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.75
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 12639417404311150, guid: 62edc116408dc3641a683aa01389cded, type: 3}
       propertyPath: m_LocalPosition.z
@@ -673,11 +673,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 1.091969, y: 1.2123272}
-      - {x: 1.094275, y: 0.7678015}
-      - {x: 1.4300718, y: -0.018247128}
-      - {x: 1.8850305, y: -0.76778626}
-      - {x: 1.8388128, y: -1.1123418}
-      - {x: 2.5486455, y: -2.419846}
+      - {x: 1.2415156, y: 0.865962}
+      - {x: 1.6427526, y: 0.1617136}
+      - {x: 2.0322711, y: -0.55510545}
+      - {x: 2.2314544, y: -1.0305423}
+      - {x: 2.712246, y: -2.4034863}
       - {x: 2.8424788, y: -2.4190483}
       - {x: 2.4835656, y: -0.8241832}
       - {x: 2.4980125, y: 1.2341579}
@@ -1130,7 +1130,7 @@ MonoBehaviour:
   - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
   - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
   - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
-  waitBetweenRespawns: 3
+  waitBetweenRespawns: 2
   initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &575249547
 GameObject:
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
   - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
   - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
-  waitBetweenRespawns: 3
+  waitBetweenRespawns: 2
   initialPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &677357388
 PrefabInstance:
@@ -1911,9 +1911,9 @@ PolygonCollider2D:
       - {x: -0.20791078, y: -1.6170957}
       - {x: -0.40579033, y: -2.264976}
       - {x: -0.24194288, y: -2.4501786}
-      - {x: 0.9012003, y: -2.403882}
-      - {x: 0.4664557, y: -1.1730068}
-      - {x: 0.11691284, y: -0.19146883}
+      - {x: 0.72123957, y: -2.403882}
+      - {x: 0.28649497, y: -1.1730068}
+      - {x: -0.030327797, y: -0.256909}
   m_UseDelaunayMesh: 0
 --- !u!1 &705507993
 GameObject:
@@ -2183,7 +2183,7 @@ MonoBehaviour:
   - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
   - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
   - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
-  waitBetweenRespawns: 3
+  waitBetweenRespawns: 2
   initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -2393,8 +2393,10 @@ PolygonCollider2D:
       - {x: -2.037268, y: 0.80563164}
       - {x: -1.8498886, y: 0.3104176}
       - {x: -1.8281114, y: 0.07172701}
-      - {x: -2.3751729, y: 0.008623302}
-      - {x: -2.3761604, y: -0.45516923}
+      - {x: -2.1081004, y: -0.00806874}
+      - {x: -2.059012, y: -0.3550171}
+      - {x: -1.8279419, y: -0.6617995}
+      - {x: -1.4671891, y: -0.68695676}
       - {x: -0.8769366, y: -0.45790446}
       - {x: 0.6084391, y: -0.37528968}
       - {x: 1.301188, y: -1.0533553}
@@ -2566,6 +2568,8 @@ GameObject:
   - component: {fileID: 1112289981}
   - component: {fileID: 1112289982}
   - component: {fileID: 1112289983}
+  - component: {fileID: 1112289984}
+  - component: {fileID: 1112289985}
   m_Layer: 0
   m_Name: Teeth
   m_TagString: Untagged
@@ -2582,7 +2586,7 @@ Transform:
   m_GameObject: {fileID: 1112289980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.365, y: -2.608, z: 0}
+  m_LocalPosition: {x: -1.12, y: -2.42, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2647,7 +2651,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112289980}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2739,6 +2743,63 @@ PolygonCollider2D:
       - {x: 1.5083334, y: -0.07916667}
       - {x: 1.5666667, y: -0.012500001}
   m_UseDelaunayMesh: 0
+--- !u!61 &1112289984
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112289980}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.28, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2333333, y: 0.7583333}
+    newSize: {x: 3.2333333, y: 0.7583333}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.21, y: 0.7583333}
+  m_EdgeRadius: 0
+--- !u!114 &1112289985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112289980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee29985d93dc04ff0b405b8ca9958c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1307745579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3453,7 +3514,7 @@ MonoBehaviour:
   - {fileID: 2739914261989026702, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
   - {fileID: 2739914261989026702, guid: 6e91a6ac934f94f4e882dd80b4bf9397, type: 3}
   - {fileID: 2739914261989026702, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
-  waitBetweenRespawns: 3
+  waitBetweenRespawns: 2
   initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1618117408
 GameObject:
