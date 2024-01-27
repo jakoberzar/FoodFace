@@ -5,40 +5,46 @@ using UnityEngine;
 
 public class Face : MonoBehaviour
 {
-    public float constantMoveUp = 0.5f;
-    public float upperLimitY = 0.5f;
-    private float moveDown = 1f;
-    private float moveDownLimit = -2.2f;
+    public float constantMoveUp = 0.05f;
+    public float upLimitY = 1.3f;
+    private float constantMoveDown = 1.2f;
+    public float downLimitY = -1.7f;
 
-    // Start is called before the first frame update
+    private bool downWasPressed = false;
+
     void Start()
     {
         Vector3 position = transform.position;
-        position.y = upperLimitY;
+        position.y = upLimitY;
         transform.position = position;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            downWasPressed = true;
+        }
     }
 
     void FixedUpdate()
     {
-        // Get the current position of the object
         Vector3 position = transform.position;
 
         // Set the new Y position with the added movement amount
-        if (Input.GetKey(KeyCode.Space) && position.y >= moveDownLimit)
+        if (downWasPressed && position.y >= downLimitY)
         {
-            position.y -= moveDown;
-            position.y = Math.Max(moveDownLimit, position.y);
-        } else if (position.y < upperLimitY)
+            position.y -= constantMoveDown;
+            position.y = Math.Max(downLimitY, position.y);
+            downWasPressed = false;
+        }
+        else if (position.y < upLimitY)
         {
+            // TODO: Make it more like a spring
             position.y += constantMoveUp;
+            position.y = Math.Min(upLimitY, position.y);
         }
 
-        // Set the object's position to the new position
         transform.position = position;
     }
 
