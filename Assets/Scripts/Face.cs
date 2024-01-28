@@ -5,22 +5,15 @@ using UnityEngine;
 
 public class Face : MonoBehaviour
 {
-    public float constantMoveUp = 0.05f;
-    public float upLimitY = 1.3f;
     public float constantMoveDown = 0.75f;
     public float downLimitY = -1.7f;
+    public ScoreManager scoreManager;
 
     private bool downWasPressed = false;
 
-    void Start()
-    {
-        Vector3 position = transform.position;
-        position.y = upLimitY;
-        transform.position = position;
-    }
-
     void Update()
     {
+        if (!scoreManager.isRunning) return;
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             downWasPressed = true;
