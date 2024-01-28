@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score_addition: 5
+  food_color: {r: 1, g: 0.90105724, b: 0.033018887, a: 1}
 --- !u!58 &5333949476951676123
 CircleCollider2D:
   m_ObjectHideFlags: 0

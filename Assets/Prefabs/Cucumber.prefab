@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score_addition: 20
+  food_color: {r: 0.454902, g: 0.7058824, b: 0.32156864, a: 1}
 --- !u!60 &8795493391047256375
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FoodAffectOnPlayer : MonoBehaviour
 {
     public int score_addition = 0;
+    public Color food_color;
     
     // Start is called before the first frame update
     void Start()

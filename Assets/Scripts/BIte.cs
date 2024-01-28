@@ -8,14 +8,17 @@ public class BIte : MonoBehaviour
     public GameObject foodParticlePrefab;
     public AudioSource audioSource;
 
-    private void CreateFoodParticles(Transform foodParticlesTransform)
+    private void CreateFoodParticles(Transform foodParticlesTransform, Color food_color)
     {
-        Instantiate(foodParticlePrefab, foodParticlesTransform.position, Quaternion.identity);
+        GameObject food_particle = Instantiate(foodParticlePrefab, foodParticlesTransform.position, Quaternion.identity);
+        var food_particle_system = food_particle.GetComponent<ParticleSystem>();
+        var main_module = food_particle_system.main;
+        main_module.startColor = food_color;
     }
 
-    private void BiteAffect(Transform biteLocation)
+    private void BiteAffect(Transform biteLocation, Color food_color)
     {
-        CreateFoodParticles(biteLocation);
+        CreateFoodParticles(biteLocation, food_color);
         audioSource.Play();
     }
 
@@ -25,7 +28,7 @@ public class BIte : MonoBehaviour
         scoreManager.AddScore(food_affect.score_addition);
         Debug.Log("Bit: " + collision.gameObject.name +
             " with score: " + food_affect.score_addition);
-        BiteAffect(collision.transform);
+        BiteAffect(collision.transform, food_affect.food_color);
         GameObject.Destroy(collision.gameObject);
     }
 }
