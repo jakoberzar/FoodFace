@@ -24,6 +24,7 @@ public class Face : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             downWasPressed = true;
+            GetComponent<Animation>().Play();
         }
     }
 
