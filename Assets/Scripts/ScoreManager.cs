@@ -8,6 +8,8 @@ public class ScoreManager : MonoBehaviour
 {
     public Score scoreComponent;
     public Health healthComponent;
+    public GameObject endOverlay;
+    public TextMeshProUGUI endScoreText;
     public float startingTimeWithoutDecrease = 2.0f;
 
     int score = 0;
@@ -22,11 +24,14 @@ public class ScoreManager : MonoBehaviour
 
     public void AddHealth(float add)
     {
-        Debug.Log("Adding " + add + " to " + health);
         health += add;
         health = Mathf.Clamp(health, 0, 100);
-        Debug.Log("Result is " + health);
         healthComponent.SetHealth(health);
+    }
+
+    void Start()
+    {
+        endOverlay.SetActive(false);
     }
 
     void Update()
@@ -38,6 +43,12 @@ public class ScoreManager : MonoBehaviour
         else
         {
             AddHealth(-12 * Time.deltaTime);
+        }
+        if (health <= 0)
+        {
+            endScoreText.text = "Your final score was " + score + ".";
+            endOverlay.SetActive(true);
+         
         }
     }
 }
