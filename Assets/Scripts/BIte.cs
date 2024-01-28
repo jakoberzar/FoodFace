@@ -6,6 +6,7 @@ public class BIte : MonoBehaviour
 {
     public ScoreManager scoreManager;
     public GameObject foodParticlePrefab;
+    public AudioSource audioSource;
 
     private void CreateFoodParticles(Transform foodParticlesTransform)
     {
@@ -15,6 +16,7 @@ public class BIte : MonoBehaviour
     private void BiteAffect(Transform biteLocation)
     {
         CreateFoodParticles(biteLocation);
+        audioSource.Play();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
