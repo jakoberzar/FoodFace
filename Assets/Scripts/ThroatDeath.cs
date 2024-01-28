@@ -28,7 +28,7 @@ public class ThroatDeath : MonoBehaviour
         }
         Debug.Log("Collision in throat with: " + collision.gameObject.name);
         FoodAffectOnPlayer food_affect = collision.gameObject.GetComponent<FoodAffectOnPlayer>();
-        scoreManager.DecreaseScore(food_affect.score_addition * 2);
+        scoreManager.AddHealth(-food_affect.score_addition);
         foodFaceAnimation.Play("Gag");
         foodFaceAudioSource.Play();
         // Destroy the object to reduce waste!

@@ -13,6 +13,6 @@ public class Health : MonoBehaviour
     public void SetHealth(float health)
     {
         this.health = health;
-        slider.value = health / maxHealth;
+        slider.value = Mathf.Min(health, maxHealth) / maxHealth;
     }
 }

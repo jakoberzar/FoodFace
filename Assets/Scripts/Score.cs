@@ -5,19 +5,12 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public int score = 0;
-    public TextMeshPro scoreText;
+    public TextMeshProUGUI scoreText;
+    int score = 0;
 
-    public void AddScore(int points)
+    public void SetScore(int score)
     {
-        score += points;
+        this.score = score;
         scoreText.text = "Score: " + score;
     }
-
-    public void DecreaseScore(int points)
-    {
-        score += points;
-        scoreText.text = "Score: " + score;
-    }
-
 }

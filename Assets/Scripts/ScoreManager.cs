@@ -6,45 +6,38 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-    public Health healthScript;
+    public Score scoreComponent;
+    public Health healthComponent;
+    public float startingTimeWithoutDecrease = 2.0f;
 
     int score = 0;
     float health = 100;
 
-
     public void AddScore(int points)
     {
         score += points;
+        scoreComponent.SetScore(score);
         AddHealth(points);
-        scoreText.text = "Score: " + score;
     }
 
-    public void DecreaseScore(int points)
+    public void AddHealth(float add)
     {
-        score -= points;
-        //AddHealth(-points);
-        scoreText.text = "Score: " + score;
-    }
-
-    void AddHealth(float add)
-    {
+        Debug.Log("Adding " + add + " to " + health);
         health += add;
-        health = Mathf.Min(health, 100);
-        healthScript.SetHealth(health);
+        health = Mathf.Clamp(health, 0, 100);
+        Debug.Log("Result is " + health);
+        healthComponent.SetHealth(health);
     }
 
-
-
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
-    // Update is called once per frame
     void Update()
     {
-        AddHealth(-12 * Time.deltaTime);
+        if (startingTimeWithoutDecrease > 0)
+        {
+            startingTimeWithoutDecrease -= Time.deltaTime;
+        }
+        else
+        {
+            AddHealth(-12 * Time.deltaTime);
+        }
     }
 }
