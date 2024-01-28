@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec024041319143f89a2dd8c040e835f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score_addition: 5
+  score_addition: 10
   food_color: {r: 1, g: 0.90105724, b: 0.033018887, a: 1}
 --- !u!58 &5333949476951676123
 CircleCollider2D:

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec024041319143f89a2dd8c040e835f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score_addition: 20
+  score_addition: 5
   food_color: {r: 1, g: 0.5170068, b: 0, a: 1}
 --- !u!60 &8984182158664643887
 PolygonCollider2D:

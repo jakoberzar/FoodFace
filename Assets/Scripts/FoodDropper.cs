@@ -33,6 +33,7 @@ public class FoodDropper : MonoBehaviour
             current_food.GetComponent<FoodBehaviour>().drop();
             StartCoroutine(DelayedClone());
             current_food = null;
+            GetComponent<AudioSource>().Play();
         }
     }
 
@@ -40,7 +41,7 @@ public class FoodDropper : MonoBehaviour
     {
         GameObject food_prefab = foodPrefabs[Random.Range(0, foodPrefabs.Count)];
         yield return new WaitForSeconds(waitBetweenRespawns);
-        current_food = Instantiate(food_prefab, initialPos, transform.rotation);
+        current_food = Instantiate(food_prefab, initialPos, food_prefab.transform.rotation);
         current_food.GetComponent<FoodBehaviour>().isDropped = false;
         current_food.GetComponent<Rigidbody2D>().gravityScale = 0f;
     }

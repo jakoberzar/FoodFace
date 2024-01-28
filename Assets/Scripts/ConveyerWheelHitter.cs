@@ -20,6 +20,8 @@ public class ConveyerWheelHitter : MonoBehaviour
             // Apply a nudge force to the right
             otherRigidbody.AddForce(new Vector2(
                 nudgeForce, 0f), ForceMode2D.Impulse);
+
+            GetComponent<AudioSource>().Play();
         }
     }
 }
