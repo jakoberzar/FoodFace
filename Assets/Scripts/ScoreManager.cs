@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI endScoreText;
     public float startingTimeWithoutDecrease = 2.0f;
     public bool isRunning => _isRunning;
+    public float scoring_factor = 1f;
 
     private bool _isRunning = true;
     int score = 0;
@@ -22,7 +23,7 @@ public class ScoreManager : MonoBehaviour
         if (!isRunning) return;
         score += points;
         scoreComponent.SetScore(score);
-        AddHealth(points / 2);
+        AddHealth(points * scoring_factor);
     }
 
     public void AddHealth(float add)
