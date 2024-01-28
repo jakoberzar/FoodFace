@@ -24,7 +24,8 @@ public class BIte : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        FoodAffectOnPlayer food_affect = collision.gameObject.GetComponent<FoodAffectOnPlayer>();
+        FoodAffectOnPlayer food_affect =
+            collision.gameObject.GetComponent<FoodAffectOnPlayer>();
         scoreManager.AddScore(food_affect.score_addition);
         Debug.Log("Bit: " + collision.gameObject.name +
             " with score: " + food_affect.score_addition);
