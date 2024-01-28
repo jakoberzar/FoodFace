@@ -12,11 +12,13 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI endScoreText;
     public float startingTimeWithoutDecrease = 2.0f;
 
+    bool isRunning = true;
     int score = 0;
     float health = 100;
 
     public void AddScore(int points)
     {
+        if (!isRunning) return;
         score += points;
         scoreComponent.SetScore(score);
         AddHealth(points);
@@ -24,6 +26,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddHealth(float add)
     {
+        if (!isRunning) return;
         health += add;
         health = Mathf.Clamp(health, 0, 100);
         healthComponent.SetHealth(health);
@@ -32,6 +35,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         endOverlay.SetActive(false);
+        isRunning = true;
     }
 
     void Update()
@@ -48,7 +52,7 @@ public class ScoreManager : MonoBehaviour
         {
             endScoreText.text = "Your final score was " + score + ".";
             endOverlay.SetActive(true);
-         
+            isRunning = false;
         }
     }
 }
