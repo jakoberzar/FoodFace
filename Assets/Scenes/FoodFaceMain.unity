@@ -373,6 +373,18 @@ PrefabInstance:
       value: Tomato
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3372939388945837156, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3372939388945837156, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3372939388945837156, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -414,7 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301632989754287647, guid: d0db0dc7e7320445e9ee94a5ceca7b2a, type: 3}
       propertyPath: m_Mass
-      value: 0.8235498
+      value: 0.66707534
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1662,15 +1674,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1714,7 +1726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301632989754287647, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
       propertyPath: m_Mass
-      value: 1.5267494
+      value: 1.2366669
       objectReference: {fileID: 0}
     - target: {fileID: 8984182158664643887, guid: 16197f186b62e4320b16c2214e3b4ba9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -2811,10 +2823,10 @@ PolygonCollider2D:
       - {x: -2.037268, y: 0.80563164}
       - {x: -1.8498886, y: 0.3104176}
       - {x: -1.8281114, y: 0.07172701}
-      - {x: -2.1081004, y: -0.00806874}
-      - {x: -2.059012, y: -0.3550171}
-      - {x: -1.8279419, y: -0.6617995}
-      - {x: -1.4671891, y: -0.68695676}
+      - {x: -2.3743255, y: -0.061313808}
+      - {x: -2.346535, y: -0.34436813}
+      - {x: -2.190008, y: -0.7043955}
+      - {x: -2.0848315, y: -0.7614999}
       - {x: -0.8769366, y: -0.45790446}
       - {x: 0.6084391, y: -0.37528968}
       - {x: 1.301188, y: -1.0533553}
@@ -3382,7 +3394,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.28, y: 0}
+  m_Offset: {x: 0.28, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3910,15 +3922,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3962,7 +3974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301632989754287647, guid: 89e1ab35a505d48d1af19fc065431e9b, type: 3}
       propertyPath: m_Mass
-      value: 0.8341601
+      value: 0.67566967
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3999,7 +4011,7 @@ Transform:
   m_GameObject: {fileID: 1375284514}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.71, y: 1.47, z: 0}
+  m_LocalPosition: {x: 4.71, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4076,8 +4088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   constantMoveUp: 0.05
-  upLimitY: 1.6
-  constantMoveDown: 0.4
+  upLimitY: 1.7
+  constantMoveDown: 0.6
   downLimitY: -0.25
 --- !u!145 &1375284518
 SpringJoint:
@@ -4092,7 +4104,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 0
   m_ConnectedAnchor: {x: 0, y: 3.7, z: 0}
   serializedVersion: 2
-  m_Spring: 30
+  m_Spring: 35
   m_Damper: 10
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -4370,6 +4382,18 @@ PrefabInstance:
       value: Cheese
       objectReference: {fileID: 0}
     - target: {fileID: 3372939388945837156, guid: 821268304a41abb42b8b579c15a410f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3372939388945837156, guid: 821268304a41abb42b8b579c15a410f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3372939388945837156, guid: 821268304a41abb42b8b579c15a410f8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3372939388945837156, guid: 821268304a41abb42b8b579c15a410f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4411,7 +4435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301632989754287647, guid: 821268304a41abb42b8b579c15a410f8, type: 3}
       propertyPath: m_Mass
-      value: 0.88664097
+      value: 0.7181791
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5234,7 +5258,7 @@ Transform:
   m_GameObject: {fileID: 2005768165}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.7, y: 1.1, z: 0}
+  m_LocalPosition: {x: 4.7, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
