@@ -10,6 +10,7 @@ public class FoodDropper : MonoBehaviour
     public List<GameObject> foodPrefabs;
     public float waitBetweenRespawns = 3.0f;
     public Vector3 initialPos;
+    public ScoreManager scoreManager;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class FoodDropper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!scoreManager.isRunning) return;
         bool drop_it = false;
         if ((keyCode == "Q" && Input.GetKeyDown(KeyCode.Q)) ||
             (keyCode == "W" && Input.GetKeyDown(KeyCode.W)) ||

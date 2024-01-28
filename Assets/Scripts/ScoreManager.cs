@@ -11,8 +11,9 @@ public class ScoreManager : MonoBehaviour
     public GameObject endOverlay;
     public TextMeshProUGUI endScoreText;
     public float startingTimeWithoutDecrease = 2.0f;
+    public bool isRunning => _isRunning;
 
-    bool isRunning = true;
+    private bool _isRunning = true;
     int score = 0;
     float health = 100;
 
@@ -21,7 +22,7 @@ public class ScoreManager : MonoBehaviour
         if (!isRunning) return;
         score += points;
         scoreComponent.SetScore(score);
-        AddHealth(points);
+        AddHealth(points / 2);
     }
 
     public void AddHealth(float add)
@@ -35,7 +36,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         endOverlay.SetActive(false);
-        isRunning = true;
+        _isRunning = true;
     }
 
     void Update()
@@ -46,13 +47,48 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            AddHealth(-12 * Time.deltaTime);
+            AddHealth(-15 * Time.deltaTime);
         }
-        if (health <= 0)
+        if (health <= 0 && isRunning)
         {
-            endScoreText.text = "Your final score was " + score + ".";
+
+            int highScore = PlayerPrefs.GetInt("highScore");
+            if (highScore == 0)
+            {
+                endScoreText.text = "Your final score was " + score + ".";
+                PlayerPrefs.SetInt("highScore", score);
+            }
+            else if (score > highScore)
+            {
+                endScoreText.text = "Congratulations! You have just beaten the high score of " + highScore + "!\nYour score of " + score + " is now the new record!";
+                highScore = score;
+                PlayerPrefs.SetInt("highScore", score);
+            }
+            else
+            {
+                endScoreText.text = "Your final score was " + score + ",\ntry to beat the high score of " + highScore + "!";
+            }
             endOverlay.SetActive(true);
-            isRunning = false;
+            _isRunning = false;
         }
     }
+
+
+    //// Singleton
+    //private static ScoreManager _instance;
+    //public static ScoreManager Instance
+    //{
+    //    get
+    //    {
+    //        if (_instance == null)
+    //        {
+    //            Debug.LogError("Score manager is null");
+    //        }
+    //        return _instance;
+    //    }
+    //}
+    //private void Awake()
+    //{
+    //    _instance = this;
+    //}
 }
