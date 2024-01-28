@@ -1387,6 +1387,7 @@ MonoBehaviour:
   - {fileID: 6292412792308335738, guid: 4d13ca4ece1944e88863dcd719b96b34, type: 3}
   waitBetweenRespawns: 0.5
   initialPos: {x: 0, y: 0, z: 0}
+  scoreManager: {fileID: 1511046039}
 --- !u!82 &562634621
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1847,6 +1848,7 @@ MonoBehaviour:
   - {fileID: 6300025364499485221, guid: bb094bc2931a241c0b926362b2ce498f, type: 3}
   waitBetweenRespawns: 0.5
   initialPos: {x: 0, y: 0, z: 0}
+  scoreManager: {fileID: 1511046039}
 --- !u!82 &675849117
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2519,6 +2521,7 @@ MonoBehaviour:
   - {fileID: 6292412792308335738, guid: 4d13ca4ece1944e88863dcd719b96b34, type: 3}
   waitBetweenRespawns: 0.5
   initialPos: {x: 0, y: 0, z: 0}
+  scoreManager: {fileID: 1511046039}
 --- !u!82 &927015455
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3956,10 +3959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb83c4a64bb5643478935b68144b1c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  constantMoveUp: 0.05
-  upLimitY: 1.7
   constantMoveDown: 0.6
   downLimitY: -0.25
+  scoreManager: {fileID: 1511046039}
 --- !u!145 &1375284518
 SpringJoint:
   m_ObjectHideFlags: 0
@@ -5042,6 +5044,7 @@ MonoBehaviour:
   - {fileID: 1709118998147447569, guid: df7f056ec676c4191b0adcc40f7aaed7, type: 3}
   waitBetweenRespawns: 0.5
   initialPos: {x: 0, y: 0, z: 0}
+  scoreManager: {fileID: 1511046039}
 --- !u!82 &1600963186
 AudioSource:
   m_ObjectHideFlags: 0
